@@ -62,9 +62,9 @@
 //
 //#include "CocoStudio/GUI/System/CocosGUI.h"
 //
-//#include "CocoStudio/Json/CSContentJsonDictionary.h"
-//#include "CocoStudio/Json/DictionaryHelper.h"
-//
+#include "CocoStudio/Json/CSContentJsonDictionary.h"
+#include "CocoStudio/Json/DictionaryHelper.h"
+
 //#include "CocoStudio/Reader/SceneReader.h"
 //
 //#include "CocoStudio/Action/CCActionManager.h"
