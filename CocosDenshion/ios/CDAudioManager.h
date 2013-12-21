@@ -94,7 +94,7 @@ typedef enum {
     NSString        *audioSourceFilePath;
     NSInteger        numberOfLoops;
     float            volume;
-    id<CDLongAudioSourceDelegate> delegate; 
+    id<CDLongAudioSourceDelegate> __weak delegate; 
     BOOL            mute;
     BOOL            enabled_;
     BOOL            backgroundMusic;
@@ -110,7 +110,7 @@ typedef enum {
 @property (readonly) NSString *audioSourceFilePath;
 @property (readwrite, nonatomic) NSInteger numberOfLoops;
 @property (readwrite, nonatomic) float volume;
-@property (assign) id<CDLongAudioSourceDelegate> delegate;
+@property (weak) id<CDLongAudioSourceDelegate> delegate;
 /* This long audio source functions as background music */
 @property (readwrite, nonatomic) BOOL backgroundMusic;
 @property (readonly) BOOL paused;
@@ -167,7 +167,7 @@ typedef enum {
 }
 
 @property (readonly) CDSoundEngine *soundEngine;
-@property (readonly) CDLongAudioSource *backgroundMusic;
+@property (weak, readonly) CDLongAudioSource *backgroundMusic;
 @property (readonly) BOOL willPlayBackgroundMusic;
 
 /** Returns the shared singleton */
