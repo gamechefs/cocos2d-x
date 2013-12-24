@@ -377,9 +377,9 @@ bool AssetsManager::createDirectory(const char *path)
 
 void AssetsManager::setSearchPath()
 {
+    // BU
     vector<string> searchPaths = CCFileUtils::sharedFileUtils()->getSearchPaths();
-    vector<string>::iterator iter = searchPaths.begin();
-    searchPaths.insert(iter, _storagePath);
+    searchPaths.push_back(_storagePath);
     CCFileUtils::sharedFileUtils()->setSearchPaths(searchPaths);
 }
 
