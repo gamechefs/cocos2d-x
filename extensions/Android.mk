@@ -6,6 +6,32 @@ LOCAL_MODULE    := cocos_extension_static
 LOCAL_MODULE_FILENAME := libextension
 
 LOCAL_SRC_FILES := AssetsManager/AssetsManager.cpp \
+GUI/CCControlExtension/CCControl.cpp \
+GUI/CCControlExtension/CCControlButton.cpp \
+GUI/CCControlExtension/CCControlColourPicker.cpp \
+GUI/CCControlExtension/CCControlHuePicker.cpp \
+GUI/CCControlExtension/CCControlSaturationBrightnessPicker.cpp \
+GUI/CCControlExtension/CCControlSlider.cpp \
+GUI/CCControlExtension/CCControlSwitch.cpp \
+GUI/CCControlExtension/CCControlUtils.cpp \
+GUI/CCControlExtension/CCInvocation.cpp \
+GUI/CCControlExtension/CCScale9Sprite.cpp \
+GUI/CCControlExtension/CCControlPotentiometer.cpp \
+GUI/CCControlExtension/CCControlStepper.cpp \
+GUI/CCScrollView/CCScrollView.cpp \
+GUI/CCScrollView/CCTableView.cpp \
+GUI/CCScrollView/CCTableViewCell.cpp \
+GUI/CCScrollView/CCSorting.cpp \
+GUI/CCEditBox/CCEditBox.cpp \
+GUI/CCEditBox/CCEditBoxImplAndroid.cpp \
+network/HttpClient.cpp \
+network/WebSocket.cpp \
+physics_nodes/CCPhysicsDebugNode.cpp \
+physics_nodes/CCPhysicsSprite.cpp \
+LocalStorage/LocalStorageAndroid.cpp \
+CocoStudio/Json/lib_json/json_value.cpp \
+CocoStudio/Json/lib_json/json_reader.cpp \
+CocoStudio/Json/lib_json/json_writer.cpp
 # CCBReader/CCBFileLoader.cpp \
 # CCBReader/CCBReader.cpp \
 # CCBReader/CCControlButtonLoader.cpp \
@@ -30,29 +56,6 @@ LOCAL_SRC_FILES := AssetsManager/AssetsManager.cpp \
 # CCBReader/CCBValue.cpp \
 # CCBReader/CCData.cpp \
 # CCBReader/CCNode+CCBRelativePositioning.cpp \
-GUI/CCControlExtension/CCControl.cpp \
-GUI/CCControlExtension/CCControlButton.cpp \
-GUI/CCControlExtension/CCControlColourPicker.cpp \
-GUI/CCControlExtension/CCControlHuePicker.cpp \
-GUI/CCControlExtension/CCControlSaturationBrightnessPicker.cpp \
-GUI/CCControlExtension/CCControlSlider.cpp \
-GUI/CCControlExtension/CCControlSwitch.cpp \
-GUI/CCControlExtension/CCControlUtils.cpp \
-GUI/CCControlExtension/CCInvocation.cpp \
-GUI/CCControlExtension/CCScale9Sprite.cpp \
-GUI/CCControlExtension/CCControlPotentiometer.cpp \
-GUI/CCControlExtension/CCControlStepper.cpp \
-GUI/CCScrollView/CCScrollView.cpp \
-GUI/CCScrollView/CCTableView.cpp \
-GUI/CCScrollView/CCTableViewCell.cpp \
-GUI/CCScrollView/CCSorting.cpp \
-GUI/CCEditBox/CCEditBox.cpp \
-GUI/CCEditBox/CCEditBoxImplAndroid.cpp \
-network/HttpClient.cpp \
-network/WebSocket.cpp \
-physics_nodes/CCPhysicsDebugNode.cpp \
-physics_nodes/CCPhysicsSprite.cpp \
-LocalStorage/LocalStorageAndroid.cpp \
 # CocoStudio/Armature/CCArmature.cpp \
 # CocoStudio/Armature/CCBone.cpp \
 # CocoStudio/Armature/animation/CCArmatureAnimation.cpp \
@@ -102,9 +105,6 @@ LocalStorage/LocalStorageAndroid.cpp \
 # CocoStudio/Components/CCInputDelegate.cpp \
 # CocoStudio/Json/CSContentJsonDictionary.cpp \
 # CocoStudio/Json/DictionaryHelper.cpp \
-CocoStudio/Json/lib_json/json_value.cpp \
-CocoStudio/Json/lib_json/json_reader.cpp \
-CocoStudio/Json/lib_json/json_writer.cpp \
 # CocoStudio/Reader/SceneReader.cpp \
 # CocoStudio/Reader/GUIReader.cpp \
 # CocoStudio/Action/CCActionManager.cpp \
@@ -138,13 +138,12 @@ LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos_curl_static
 LOCAL_WHOLE_STATIC_LIBRARIES += box2d_static
-LOCAL_WHOLE_STATIC_LIBRARIES += chipmunk_static
 LOCAL_WHOLE_STATIC_LIBRARIES += libwebsockets_static
 
-LOCAL_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
-LOCAL_EXPORT_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
-LOCAL_CPPFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
-LOCAL_EXPORT_CPPFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=1
+LOCAL_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=0
+LOCAL_EXPORT_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=0
+LOCAL_CPPFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=0
+LOCAL_EXPORT_CPPFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=0
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH) \
                            $(LOCAL_PATH)/CCBReader \
@@ -162,5 +161,4 @@ $(call import-module,cocos2dx)
 $(call import-module,CocosDenshion/android)
 $(call import-module,cocos2dx/platform/third_party/android/prebuilt/libcurl)
 $(call import-module,external/Box2D)
-$(call import-module,external/chipmunk)
 $(call import-module,external/libwebsockets/android)
