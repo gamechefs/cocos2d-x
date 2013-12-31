@@ -51,7 +51,7 @@ NS_CC_EXT_BEGIN;
 #define BUFFER_SIZE    8192
 #define MAX_FILENAME   512
 #define LOW_SPEED_LIMIT 1L
-#define LOW_SPEED_TIME  5L
+#define LOW_SPEED_TIME  30L
 
 // Message type
 #define ASSETSMANAGER_MESSAGE_UPDATE_SUCCEED                0
