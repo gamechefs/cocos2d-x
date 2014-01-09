@@ -551,8 +551,9 @@ void AssetsManager::Helper::update(float dt)
     }
     
     // Gets message
-    msg = *(_messageQueue->begin());
-    _messageQueue->pop_front();
+    msg = (_messageQueue->back());
+    _messageQueue->clear();
+    
     pthread_mutex_unlock(&_messageQueueMutex);
     
     switch (msg->what) {
