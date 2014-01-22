@@ -40,7 +40,7 @@
 #include "network/HttpRequest.h"
 #include "network/HttpResponse.h"
 #include "network/HttpClient.h"
-//
+
 //#include "CocoStudio/Armature/CCArmature.h"
 //#include "CocoStudio/Armature/CCBone.h"
 //#include "CocoStudio/Armature/animation/CCArmatureAnimation.h"
@@ -54,25 +54,22 @@
 //#include "CocoStudio/Armature/utils/CCDataReaderHelper.h"
 //#include "CocoStudio/Armature/utils/CCTweenFunction.h"
 //#include "CocoStudio/Armature/external_tool/sigslot.h"
+//
+//#include "CocoStudio/Trigger/TriggerBase.h"
+//
+//#include "CocoStudio/Components/CCComBase.h"
 //#include "CocoStudio/Components/CCComAttribute.h"
 //#include "CocoStudio/Components/CCComAudio.h"
 //#include "CocoStudio/Components/CCComController.h"
 //#include "CocoStudio/Components/CCComRender.h"
+//
 //#include "CocoStudio/GUI/System/CocosGUI.h"
-//#include "CocoStudio/Reader/SceneReader.h"
-//#include "CocoStudio/Action/CCActionManager.h"
-//#include "CocoStudio/Json/CSContentJsonDictionary.h"
+//
 //#include "CocoStudio/Json/DictionaryHelper.h"
-
-#include "CocoStudio/Trigger/TriggerBase.h"
-
-#include "CocoStudio/Components/CCComBase.h"
-#include "CocoStudio/Components/CCComAttribute.h"
-#include "CocoStudio/Components/CCComAudio.h"
-#include "CocoStudio/Components/CCComController.h"
-#include "CocoStudio/Components/CCComRender.h"
-
-#include "CocoStudio/GUI/System/CocosGUI.h"
+//
+//#include "CocoStudio/Reader/SceneReader.h"
+//
+//#include "CocoStudio/Action/CCActionManager.h"
 
 
 // Physics integration

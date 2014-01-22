@@ -29,56 +29,12 @@ network/WebSocket.cpp \
 physics_nodes/CCPhysicsDebugNode.cpp \
 physics_nodes/CCPhysicsSprite.cpp \
 LocalStorage/LocalStorageAndroid.cpp \
-CocoStudio/GUI/System/UITouchGroup.cpp \
-CocoStudio/GUI/UIWidgets/ScrollWidget/UIListView.cpp \
-CocoStudio/GUI/UIWidgets/ScrollWidget/UIPageView.cpp \
-CocoStudio/GUI/UIWidgets/ScrollWidget/UIScrollView.cpp \
-CocoStudio/GUI/UIWidgets/UIButton.cpp \
-CocoStudio/GUI/UIWidgets/UICheckBox.cpp \
-CocoStudio/GUI/UIWidgets/UIImageView.cpp \
-CocoStudio/GUI/UIWidgets/UILabel.cpp \
-CocoStudio/GUI/UIWidgets/UILabelAtlas.cpp \
-CocoStudio/GUI/UIWidgets/UILabelBMFont.cpp \
-CocoStudio/GUI/UIWidgets/UILoadingBar.cpp \
-CocoStudio/GUI/UIWidgets/UISlider.cpp \
-CocoStudio/Reader/SceneReader.cpp \
-CocoStudio/Reader/GUIReader.cpp \
-CocoStudio/Action/CCActionManager.cpp \
-CocoStudio/Action/CCActionObject.cpp \
-CocoStudio/Action/CCActionNode.cpp \
-CocoStudio/Action/CCActionFrame.cpp \
-CocoStudio/Action/CCActionEaseEx.cpp \
-CocoStudio/Action/CCActionFrameEasing.cpp \
-CocoStudio/Trigger/ObjectFactory.cpp \
-CocoStudio/Trigger/TriggerBase.cpp \
-CocoStudio/Trigger/TriggerMng.cpp \
-CocoStudio/Trigger/TriggerObj.cpp \
-spine/Animation.cpp \
-spine/AnimationState.cpp \
-spine/AnimationStateData.cpp \
-spine/Atlas.cpp \
-spine/AtlasAttachmentLoader.cpp \
-spine/Attachment.cpp \
-spine/AttachmentLoader.cpp \
-spine/Bone.cpp \
-spine/BoneData.cpp \
-spine/Json.cpp \
-spine/RegionAttachment.cpp \
-spine/Skeleton.cpp \
-spine/SkeletonData.cpp \
-spine/SkeletonJson.cpp \
-spine/Skin.cpp \
-spine/Slot.cpp \
-spine/SlotData.cpp \
-spine/extension.cpp \
-spine/CCSkeletonAnimation.cpp \
-spine/CCSkeleton.cpp \
-spine/spine-cocos2dx.cpp \
 
 LOCAL_WHOLE_STATIC_LIBRARIES := cocos2dx_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocosdenshion_static
 LOCAL_WHOLE_STATIC_LIBRARIES += cocos_curl_static
 LOCAL_WHOLE_STATIC_LIBRARIES += box2d_static
+LOCAL_WHOLE_STATIC_LIBRARIES += chipmunk_static
 LOCAL_WHOLE_STATIC_LIBRARIES += libwebsockets_static
 
 LOCAL_CFLAGS += -DCC_ENABLE_CHIPMUNK_INTEGRATION=0
@@ -102,4 +58,5 @@ $(call import-module,cocos2dx)
 $(call import-module,CocosDenshion/android)
 $(call import-module,cocos2dx/platform/third_party/android/prebuilt/libcurl)
 $(call import-module,external/Box2D)
+$(call import-module,external/chipmunk)
 $(call import-module,external/libwebsockets/android)
