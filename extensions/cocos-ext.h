@@ -64,6 +64,17 @@
 //#include "CocoStudio/Json/CSContentJsonDictionary.h"
 //#include "CocoStudio/Json/DictionaryHelper.h"
 
+#include "CocoStudio/Trigger/TriggerBase.h"
+
+#include "CocoStudio/Components/CCComBase.h"
+#include "CocoStudio/Components/CCComAttribute.h"
+#include "CocoStudio/Components/CCComAudio.h"
+#include "CocoStudio/Components/CCComController.h"
+#include "CocoStudio/Components/CCComRender.h"
+
+#include "CocoStudio/GUI/System/CocosGUI.h"
+
+
 // Physics integration
 #if CC_ENABLE_CHIPMUNK_INTEGRATION || CC_ENABLE_BOX2D_INTEGRATION
 #include "physics_nodes/CCPhysicsDebugNode.h"
