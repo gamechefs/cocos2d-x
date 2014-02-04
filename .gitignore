@@ -33,6 +33,7 @@ ipch/
 *.opensdf
 Generated Files
 AppPackages
+SubmissionInfo
 *.hps
 
 # Ignore files build by ndk and eclipse
@@ -112,3 +113,4 @@ tools/jenkins_scripts/mac/android/userconf.ini
 # CTags
 tags
 projects/
+cocos2dx/platform/android/java/.settings/org.eclipse.jdt.core.prefs
