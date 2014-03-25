@@ -148,10 +148,14 @@ bool AssetsManager::checkUpdate()
     }
     
     string recordedVersion = CCUserDefault::sharedUserDefault()->getStringForKey(KEY_OF_VERSION);
+    recordedVersion.erase(recordedVersion.find_last_not_of(" \n\r\t")+1);
+    _version.erase(_version.find_last_not_of(" \n\r\t")+1);
+    
+    CCLog("The recorded version is '%s', New version is '%s'", recordedVersion.c_str(), _version.c_str());
     if (recordedVersion == _version)
     {
         sendErrorMessage(kNoNewVersion);
-        CCLOG("there is not new version");
+        CCLog("there is not new version");
         // Set resource search path.
         setSearchPath();
         return false;
