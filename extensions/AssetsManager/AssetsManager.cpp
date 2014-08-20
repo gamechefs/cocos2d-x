@@ -151,7 +151,8 @@ bool AssetsManager::checkUpdate()
     recordedVersion.erase(recordedVersion.find_last_not_of(" \n\r\t")+1);
     _version.erase(_version.find_last_not_of(" \n\r\t")+1);
     
-    CCLog("The recorded version is '%s', New version is '%s'", recordedVersion.c_str(), _version.c_str());
+    CCLog("URL For Version: %s", _versionFileUrl.c_str());
+    CCLog("The recorded version is '%s' \nNew version is '%s'", recordedVersion.c_str(), _version.c_str());
     if (recordedVersion == _version)
     {
         sendErrorMessage(kNoNewVersion);
