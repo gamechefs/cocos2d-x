@@ -114,3 +114,5 @@ tools/jenkins_scripts/mac/android/userconf.ini
 tags
 projects/
 cocos2dx/platform/android/java/.settings/org.eclipse.jdt.core.prefs
+extensions/cocos2dx-store/
+external/jansson/
